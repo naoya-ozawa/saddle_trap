@@ -1,0 +1,63 @@
+\documentclass{jarticle}
+
+\title{On the Rotating Saddle Trap}
+\author{Naoya Ozawa}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+This document discusses the design of the mechanical "rotating saddle" trap\cite{}, which serves as a demonstration of the Paul trap\cite{PaulNobel}.
+
+\section{Paul Trap}
+The Paul trap was invented by W. Paul and it is meant to confine charged particles in a limited region by using an electric field. At first this seems to be simply accomplished by creating an electric field that satisfies
+\begin{eqnarray*}
+\vec{F} & = & q \vec{E} \\
+& = & -C \vec{r} \\
+& = & -C \left(
+\begin{array}{c}
+	x \\
+	y \\
+	z
+\end{array} \right)
+\end{eqnarray*}
+where $C$ is a constant diagonal, which corresponds to the electric potential of the form
+\begin{eqnarray*}
+\phi & \propto & \alpha x^2 + \beta y^2 + \gamma z^2 \, (\alpha>0,\ \beta>0,\ \gamma>0) \\
+\end{eqnarray*}
+since
+\begin{eqnarray*}
+\vec{E} & = & \nabla \phi \\
+& \propto & \left(
+\begin{array}{c}
+	2\alpha x \\
+	2\beta y \\
+	2\gamma z
+\end{array} \right).
+\end{eqnarray*}
+However, it turns out that this is not the case, since the Gauss' law requires that
+\begin{eqnarray*}
+\Delta \phi & = & 2 (\alpha + \beta + \gamma) = 0
+\end{eqnarray*}
+and this can not be simultaneously satisfied with $\alpha>0, \beta>0, \gamma>0$. Thus it is an obvious fact that a charged particle cannot be trapped by a static electric field alone. \\
+
+When the parameters $\alpha = \beta = 1, \gamma = -2$ are chosen, this does not conflict with the Gauss' law, so the electric field corresponding to
+\begin{eqnarray*}
+\phi & \propto & x^2 + y^2 - 2z^2
+\end{eqnarray*}
+could be formed statically. By expressing this as
+\begin{eqnarray*}
+\phi & = & \frac{\phi_0}{2} \left( \frac{\rho^2}{\rho_0^2} - \frac{z^2}{z_0^2} \right)
+\end{eqnarray*}
+it can be understood that this kind of potential could be formed by placing one "ring" electrode shaped as $z = \pm \frac{z_0}{\rho_0}\sqrt{ \rho^2 + \rho_0^2}$ and two "endcap" electrodes shaped as $\rho = \frac{\rho_0}{z_0}\sqrt{z^2 + z_0^2}$ and applying the voltage $\frac{\phi}{2}$ to them. Note that $r_0^2 = 2z_0^2$ holds here.
+
+
+\begin{thebibliography}{9}
+	\bibitem{PaulNobel}
+
+\end{thebibliography}
+
+
+\end{document}
