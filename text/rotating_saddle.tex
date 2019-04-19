@@ -1,4 +1,4 @@
-\documentclass{jarticle}
+\documentclass{article}
 
 \title{On the Rotating Saddle Trap}
 \author{Naoya Ozawa}
@@ -51,7 +51,9 @@ could be formed statically. By expressing this as
 \begin{eqnarray*}
 \phi & = & \frac{\phi_0}{2} \left( \frac{\rho^2}{\rho_0^2} - \frac{z^2}{z_0^2} \right)
 \end{eqnarray*}
-it can be understood that this kind of potential could be formed by placing one "ring" electrode shaped as $z = \pm \frac{z_0}{\rho_0}\sqrt{ \rho^2 + \rho_0^2}$ and two "endcap" electrodes shaped as $\rho = \frac{\rho_0}{z_0}\sqrt{z^2 + z_0^2}$ and applying the voltage $\frac{\phi}{2}$ to them. Note that $r_0^2 = 2z_0^2$ holds here.
+it can be understood that this kind of potential could be formed by placing one "ring" electrode shaped as $z = \pm \frac{z_0}{\rho_0}\sqrt{ \rho^2 + \rho_0^2}$ and two "endcap" electrodes shaped as $\rho = \frac{\rho_0}{z_0}\sqrt{z^2 + z_0^2}$ and applying the voltage $\phi_0$ to the "ring" while grounding the "endcaps". Note that $r_0^2 = 2z_0^2$ holds here. \\
+
+A positive charge cannot be stably trapped inside this potential statically since $\gamma < 0$ and it will drift away in the $z$ direction as soon as there is some perturbation. Instead, by using an AC voltage such that $\phi_0 = \phi_0(t) = V_{dc} + V_{ac} \cos{\Omega t}$, the potential will become a "flapping" 3D saddle where the uphill and downhill direction interchange at a frequency $\Omega$. 
 
 
 \begin{thebibliography}{9}
