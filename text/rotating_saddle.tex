@@ -12,6 +12,8 @@
 This document discusses the design of the mechanical "rotating saddle" trap\cite{}, which serves as a demonstration of the Paul trap\cite{PaulNobel}.
 
 \section{Paul Trap}
+
+\subsection{The Equation of Motion}
 The Paul trap was invented by W. Paul and it is meant to confine charged particles in a limited region by using an electric field. At first this seems to be simply accomplished by creating an electric field that satisfies
 \begin{eqnarray*}
 \vec{F} & = & q \vec{E} \\
@@ -53,7 +55,78 @@ could be formed statically. By expressing this as
 \end{eqnarray*}
 it can be understood that this kind of potential could be formed by placing one "ring" electrode shaped as $z = \pm \frac{z_0}{\rho_0}\sqrt{ \rho^2 + \rho_0^2}$ and two "endcap" electrodes shaped as $\rho = \frac{\rho_0}{z_0}\sqrt{z^2 + z_0^2}$ and applying the voltage $\phi_0$ to the "ring" while grounding the "endcaps". Note that $r_0^2 = 2z_0^2$ holds here. \\
 
-A positive charge cannot be stably trapped inside this potential statically since $\gamma < 0$ and it will drift away in the $z$ direction as soon as there is some perturbation. Instead, by using an AC voltage such that $\phi_0 = \phi_0(t) = V_{dc} + V_{ac} \cos{\Omega t}$, the potential will become a "flapping" 3D saddle where the uphill and downhill direction interchange at a frequency $\Omega$. 
+A positive charge cannot be stably trapped inside this potential statically since $\gamma < 0$ and it will drift away in the $z$ direction as soon as there is some perturbation. Instead, by using an AC voltage such that $\phi_0 = \phi_0(t) = V_{dc} + V_{ac} \cos{\Omega t}$, the potential will become a "flapping" 3D saddle where the uphill and downhill direction interchange at a frequency $\Omega$. This kind of potential will thus yield the equation of motion for the ion of mass $m$ and charge $q$ as
+\begin{eqnarray*}
+m \frac{d^2}{dt^2} \left(
+\begin{array}{c} 
+	\rho \\
+	z
+\end{array} \right) & = & -q \nabla \phi \\
+& = & -q \frac{ V_{dc} + V_{ac} \cos{\Omega t} }{2} \left(
+\begin{array}{c}
+	\frac{2\rho}{\rho_0^2} \\
+	-\frac{2z}{z_0^2}
+\end{array} \right) \\
+& = & -\frac{q}{\rho_0^2} \left( V_{dc} + V_{ac} \cos{\Omega t} \right) \left(
+\begin{array}{c}
+	\rho \\
+	-2z
+\end{array} \right).
+\end{eqnarray*}
+By defining dimensionless parameters as
+\begin{eqnarray*}
+\tau & = & \frac{\Omega t}{2} \\
+a_z & = & -\frac{8eV_{dc}}{m\rho_0^2 \Omega^2} \\
+a_\rho & = & \frac{4eV_{dc}}{m\rho_0^2 \Omega^2} \\
+q_z & = & \frac{4eV_{ac}}{m\rho_0^2 \Omega^2} \\
+q_\rho & = & -\frac{2eV_{ac}}{m\rho_0^2 \Omega^2}
+\end{eqnarray*}
+the equation of motion could be rewritten as
+
+
+\subsection{The Movement of the Ion}
+
+
+
+
+\section{The Rotating Saddle Trap}
+
+\subsection{The Equation of Motion (for a Point-Like Ball)}
+A demonstration of the Paul trap could be done by using a "mechanical" saddle. Since it is technically demanding to create a saddle potential that would flap up and down like the Paul trap potential, we instead make a rotating saddle potential. By considering the 2D version of the saddle electric potential ($\alpha = 1,\, \beta = -1,\, \gamma = 0$) and replacing the electric potential $\phi_0$ with the gravitational potential $mgh_0$, the potential surface could be described as
+\begin{eqnarray*}
+\phi & = & \frac{mgh_0}{\rho_0^2} \left( {x'}^2 - {y'}^2 \right)
+\end{eqnarray*}
+which rotates according to 
+\begin{eqnarray*}
+\left(
+\begin{array}{c}
+	x' \\
+	y' \\
+	z'
+\end{array} \right) & = & \left(
+\begin{array}{c}
+	\cos{\Omega t} & \sin{\Omega t} & 0 \\
+	-\sin{\Omega t} & \cos{\Omega t} & 0 \\
+	0 & 0 & 1
+\end{array} \right) \left(
+\begin{array}{c}
+	x \\
+	y \\
+	z
+\end{array} \right).
+\end{eqnarray*}
+This would yield the equation
+\begin{eqnarray*}
+m \frac{d^2}{dt^2} \left(
+\begin{array}{c}
+	x \\
+	y \\
+	z
+\end{eqnarray*} & = & -\frac{2mgh_0}
+
+
+
+
 
 
 \begin{thebibliography}{9}
