@@ -122,7 +122,79 @@ m \frac{d^2}{dt^2} \left(
 	x \\
 	y \\
 	z
-\end{eqnarray*} & = & -\frac{2mgh_0}
+\end{array} & = & -\frac{2mgh_0}{\rho_0^2} \left(
+\begin{array}{c}
+	x \cos{2\Omega t} + y \sin{2\Omega t} \\
+	x \sin{2\Omega t} - y \cos{2\Omega t} \\
+	0
+\end{array} \right).
+\end{eqnarray*}
+By defining the parameters
+\begin{eqnarray*}
+\bar{\tau} & = & \Omega t \\
+\bat{q} & = & \frac{gh_0}{\rho_0^2 \Omega^2},
+\end{eqnarray*}
+the equation of motion can be rewritten as
+\begin{eqnarray*}
+\frac{d^2}{d\bar{\tau}^2} \left(
+\begin{array}{c}
+	x \\
+	y \\
+	z
+\end{array} \right) & = & -2\bar{q} \left(
+\begin{array}{c}
+	x \cos{2\bar{\tau}} + y \sin{2\bar{\tau}} \\
+	x \sin{2\bar{\tau}} - y \cos{2\bar{\tau}} \\
+	0
+\end{array} \right).
+\end{eqnarray*}
+It should be noted here that the variables $x$ and $y$ are now mixed, whereas in the case of the Paul trap, they followed two individual equations. \\
+
+The straightforward method to solve these equations is to define a new parameter $\zeta = x + iy$ and create an equation on $\zeta$:
+\begin{eqnarray*}
+\frac{d^2}{d\bar{\tau}^2} \zeta & = & \frac{d^2}{d\bar{\tau}^2} (x + iy) \\
+& = & -2\bar{q} \left\{ (x\cos{2\bar{\tau}}+y\sin{2\bar{\tau}}) + i (x\sin{2\bar{\tau}}-y\cos{2\bar{\tau}}) \right\} \\
+& = & -2\bar{q} \left( \zeta^* \cos{2\bar{\tau}} + i\zeta^* \sin{2\bar{\tau}} \right) \\
+& = & -2\bar{q} \zeta^* e^{2i\bar{\tau}}.
+\end{eqnarray*}
+In order to eliminate the exponential part, we now rewrite $\zeta = \zeta\left(\bar{\tau}\right) = f\left(\bar{\tau}\right) e^{i\bar{\tau}}$ so that the equation of motion is reduced to
+\begin{eqnarray*}
+\frac{d^2}{d\bar{\tau}^2} f\left(\bar{\tau}\right) + 2i\frac{d}{d\bar{\tau}} f\left(\bar{\tau}\right) - f\left(\bar{\tau}\right) & = & -2\bar{q}f^*\left(\bar{\tau}\right).
+\end{eqnarray*}
+Using the complex conjugate, the first derivative, and the second derivative of the above equation, the $f^*$ terms can be eliminated and
+\begin{eqnarray*}
+\frac{d^4}{d\bar{\tau}^4}f\left(\bar{\tau}\right) + 2\frac{d^2}{d\bar{\tau}^2}f\left(\bar{\tau}\right) + \left(1-4\bar{q}^2\right)f\left(\bar{\tau}\right) & = & 0
+\end{eqnarray*}
+follows. This equation is assumed to have the solution of the form
+\begin{eqnarray*}
+f\left(\bar{\tau}\right) & = & Ae^{\beta_+\bar{\tau}} + Be^{-\beta_+\bar{\tau}} + Ce^{\beta_-\bar{\tau}} + De^{-\beta_-\bar{\tau}}
+\end{eqnarray*}
+where $\beta_\pm$ are not negative numbers. The equation of motion then yields
+\begin{eqnarray*}
+\left( \beta_+^4 + 2\beta_+^2 + 1-4\bar{q}^2 \right) & & \left( Ae^{\beta_+\bar{\tau}} + Be^{-\beta_+\bar{\tau}} \right) \\
+& + & \left( \beta_-^4 + 2\beta_-^2 + 1-4\bar{q}^2 \right)\left( Ce^{\beta_-\bar{\tau}} + De^{-\beta_-\bar{\tau}} \right) = 0
+\end{eqnarray*}
+for any value of $\bar{\tau}$, which is equivalent to the condition
+\begin{eqnarray*}
+\beta_\pm^4 + 2\beta_\pm^2 + 1 - 4\bar{q}^2 & = & 0.
+\end{eqnarray*}
+
+For the ball to be trapped in the saddle potential, $x\left(\bar{\tau}\right) = \Re{z}$ and $y\left(\bar{\tau}\right) = \Im{z}$ must both be oscillating solution, which corresponds to the parameters $\beta_\pm$ being purely imaginary. Otherwise, the function $f\left(\bar{\tau}\right)$ has a diverging term and the ball will become unstable. This condition is expressed as
+\begin{eqnarray*}
+\beta_\pm^2 & = & \pm 2|\bar{q}| - 1 \\
+& = & \frac{2gh_0}{\rho_0^2 \Omega^2} - 1 < 0
+\end{eqnarray*}
+thus
+\begin{eqnarray*}
+\frac{\Omega}{2\pi} & > & \frac{\sqrt{2gh_0}}{2\pi\rho_0}.
+\end{eqnarray*}
+
+
+
+
+
+\subsection{Demonstration}
+The equation above implies that the trapping condition is determined solely by the potential shape $(\rho_0, h_0)$ and does not depend on the mass or size of the trapped ball. Also, there is only a lower limit to the rotation speed of the potential, which means that the ball would still be trapped for very fast rotations.
 
 
 
